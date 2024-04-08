@@ -5,10 +5,22 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <a href="/">Home</a>
+    <nav>
+    
+      <a href="/" <%- title === 'All Snacks' ? 'class="active"' : '' %>>ALL SNACKS</a>
+      <% if (user) { %>
+        <a href="/"	<%- title === 'Edit Snack' ? 'class="active"' : '' %>>
+        EDIT SNACK</a>
+        <a href="/Snacks/new" <%- title === 'Add Snack' ? 'class="active"' : '' %>>ADD SNACK</a>
+        <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } %>
+    </nav>
+    <!-- <a href="/">Home</a> -->
     |
-    <a href="/">Edit Snacks</a>
+    <!-- <a href="/">Edit Snacks</a> -->
     |
-    <a href="/">Add Snacks</a>
+    <!-- <a href="/">Add Snacks</a> -->
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>

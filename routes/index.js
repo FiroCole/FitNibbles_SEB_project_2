@@ -19,15 +19,15 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/snacks', // redirecting to main /snacks route
-    failureRedirect: '/snacks' // redirecting to main /snacks route
+    successRedirect: '/', // redirecting to main /snacks route
+    failureRedirect: '/' // redirecting to main /snacks route
   }
 ));
 
 // OAuth logout route
 router.get('/logout', function(req, res){
   req.logout(function() {
-    res.redirect('/snacks');
+    res.redirect('/');
   });
 });
 module.exports = router;
