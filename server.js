@@ -9,6 +9,8 @@ const methodOverride = require('method-override');
 const passport =require("passport");
 
 require('./config/database');
+require('./config/passport');
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
