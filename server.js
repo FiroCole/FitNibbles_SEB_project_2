@@ -30,6 +30,9 @@ app.use(session({
   saveUninitialized: true
 }));
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
