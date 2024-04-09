@@ -7,10 +7,10 @@
   <body>
     <nav>
     
-      <a href="/" <%- title === 'All Snacks' ? 'class="active"' : '' %>>ALL SNACKS</a>
+      <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
       <% if (user) { %>
         <a href="/"	<%- title === 'Edit Snack' ? 'class="active"' : '' %>>
-        EDIT SNACK</a>
+        EDIT SNACKS</a>
         <a href="/Snacks/new" <%- title === 'Add Snack' ? 'class="active"' : '' %>>ADD SNACK</a>
         <a href="/logout">LOG OUT</a>
       <% } else { %>
@@ -18,9 +18,7 @@
       <% } %>
     </nav>
     <!-- <a href="/">Home</a> -->
-    |
     <!-- <a href="/">Edit Snacks</a> -->
-    |
     <!-- <a href="/">Add Snacks</a> -->
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
