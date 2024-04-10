@@ -11,9 +11,14 @@
       <% if (user) { %>
         <a href="/snacks"	<%- title === 'ALL Snack' ? 'class="active"' : '' %>>
           ALL SNACKS</a>
-        <a href="/snacks/edit"	<%- title === 'Edit Snack' ? 'class="active"' : '' %>>
-        EDIT SNACKS</a>
+        |
         <a href="/snacks/new" <%- title === 'Add Snack' ? 'class="active"' : '' %>>ADD SNACK</a>
+        |
+        <a href="/snacks/new" <%- title === 'Delete Snack' ? 'class="active"' : '' %>>ADD SNACK</a>
+        |
+        <a href="/snacks/edit"	<%- title === 'Update Snack' ? 'class="active"' : '' %>>
+        EDIT SNACKS</a>
+        
         <a href="/logout">LOG OUT</a>
       <% } else { %>
         <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>

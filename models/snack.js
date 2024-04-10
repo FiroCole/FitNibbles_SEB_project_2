@@ -22,7 +22,7 @@ const snackSchema = new Schema({
     equipment: {
         type: Schema.Types.ObjectId,
         ref: "Equipment",
-        required: true,
+    
     },
     user: {
         type: Schema.Types.ObjectId,

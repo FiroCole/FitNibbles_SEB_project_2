@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const equipmentSchema = new Schema({
     equipment: {
         type: String,
-        required: true,
         enum: ["Gym Equipment", "Home Equipment", "Other"],
     }
 }, {
