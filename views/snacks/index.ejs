@@ -5,18 +5,13 @@
     <thead>
       <tr>
         <th>Snack</th>
-        <th>Repetitions</th>
-        <th>Sets</th>
-        <th></th>
       </tr>
     </thead>
     <tbody>
       <% snacks.forEach(function(s) { %>
         <tr>
-          <td><%= s.snack %></td>
-          <td><%= s.repetions %></td>
-          <td><%= s.sets %></td>
-          <!-- <td><a href="/snacks/<%= s._id %>">DETAILS</a></td> -->
+          <td><%= s.Snack %></td>
+          <td><a href="/snacks/<%= s._id %>">DETAILS</a></td>
         </tr>
         <% }); %>
       </tbody>
