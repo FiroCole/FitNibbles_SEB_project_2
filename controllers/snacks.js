@@ -43,16 +43,19 @@ async function create(req, res) {
 
 async function show(req, res) {
     try {
+        console.log("Fetching snack with ID:", req.params.id);
         const snack = await Snack.findById(req.params.id);
+        if (!snack) {
+            throw new Error('Snack not found');
+        }
         const frequency = await Frequency.find({ snack: snack._id });
-        res.render("snacks/show", { title: "Snack Details", snack , frequency});
+        res.render("snacks/show", { title: "Snack Details", snack, frequency });
     } catch (err) {
         console.error(err);
-        // Only here should you reference err.message, as this is the catch block
-        res.render('snacks/new', { title: 'Snack', errorMsg: err.message });
+        // Redirect to a generic error page or the snack index with an error message
+        res.render('snacks/index', { title: 'Snacks', errorMsg: 'Failed to find snack.' });
     }
 }
-
 
   
 function update(req, res) {

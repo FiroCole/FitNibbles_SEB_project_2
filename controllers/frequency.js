@@ -4,6 +4,7 @@ const Frequency = require('../models/frequency');
 module.exports = {
   create, 
   edit,
+  update: updateOne,
 //   delete : deleteOne,
 };
 
@@ -30,4 +31,19 @@ async function create(req, res) {
     }
   }
 
+  async function updateOne(req, res) {
+    try {
+        const frequency = await Frequency.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!frequency) {
+            throw new Error('Failed to update frequency');
+        }
+        res.redirect(`/snacks/${frequency.snack}`); // Assuming frequency.snack holds the ID of the snack
+    } catch (err) {
+        console.log(err);
+        // Redirect or render an error
+        res.redirect('/snacks'); // Redirect to the list if there's an issue
+    }
+}
+
+  
   

@@ -14,7 +14,8 @@ router.post('/snacks/:id/frequency', frequencyCtrl.create);
 // get /frequeny/:id/edit
 router.get("/frequency/:id/edit", frequencyCtrl.edit);
 
-
+// put /frequency/:id to handle edit form information that update the entry
+router.put("/frequency/:id", frequencyCtrl.update)
 
 
 
