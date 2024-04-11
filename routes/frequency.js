@@ -10,4 +10,15 @@ const frequencyCtrl = require("../controllers/frequency")
 // POST /snacks/:id/frequency
 router.post('/snacks/:id/frequency', frequencyCtrl.create);
 
+
+// get /frequeny/:id/edit
+router.get("/frequency/:id/edit", frequencyCtrl.edit);
+
+
+
+
+
+
 module.exports = router;
+
+

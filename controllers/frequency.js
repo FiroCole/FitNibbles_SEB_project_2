@@ -3,6 +3,7 @@ const Frequency = require('../models/frequency');
 
 module.exports = {
   create, 
+  edit,
 //   delete : deleteOne,
 };
 
@@ -18,3 +19,15 @@ async function create(req, res) {
       res.redirect(`/snacks/show`, { title: 'Snack', errorMsg: err.message });
     }
   }
+
+  async function edit(req,res) {
+    try {
+      const frequency = await Frequency.findOne({ _id: req.params.id });
+      res.render("frequency/edit", { title: 'Edit Frequency', frequency });
+    } catch (err) {
+      console.log(err);
+      res.redirect(`/snacks/show`);
+    }
+  }
+
+  
