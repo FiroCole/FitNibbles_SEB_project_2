@@ -1,17 +1,17 @@
 <%- include('../partials/header') %>
 
-<form id="edit-frequency-form" action="/frequency/<%= frequency._id %>?_method=PUT" method="POST">
-    <label>Date:
-        <input type="datetime-local" required name="Date">
-      </label><br>
-    <label>Repetition:
-        <input type="number" name="Repetition" required min="1" max="9999">
-    </label><br>
+    <form id="edit-frequency-form" action="/frequency/<%= frequency._id %>?_method=PUT" method="POST">
+        <label>Date:
+            <input type="datetime-local" required name="Date">
+        </label><br>
+        <label>Repetition:
+            <input type="number" name="Repetition" required min="1" max="9999">
+        </label><br>
 
-    <label>Set:
-    <input type="number" name="Sets" required min="1" max="9999">
-</label><br>
-<button type="submit">Update this entry</button>
-</form>
+        <label>Set:
+            <input type="number" name="Sets" required min="1" max="9999">
+        </label><br>
+        <button type="submit">Update this entry</button>
+    </form>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

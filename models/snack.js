@@ -6,19 +6,14 @@ const snackSchema = new Schema({
         type: String,
         enum: ["Twinkle Toes", "Muffin Melts", "Froggie Dips"],
     },
-    equipment: {
-        type: Schema.Types.ObjectId,
-        ref: "Equipment",
-    
-    },
-    user: {
+    userSnack: {
         type: Schema.Types.ObjectId,
         ref: "User"
     },
     userName: String,
     userAvatar: String
 }, {
-    timestamps: true   
+    timestamps: true
 })
 
 module.exports = mongoose.model("Snack", snackSchema)

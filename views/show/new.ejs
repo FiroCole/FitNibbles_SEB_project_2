@@ -1,27 +1,27 @@
 <%- include('../partials/header') %>
-<div id="snacks-new-view">
-<form id="add-snacks-form" action="/snacks" method="POST">
-    <label>Snack:
-        <select name="Snack" id="Snack ">
-            <option value="Twinkle Toes">Twinkle Toes</option>
-            <option value="Muffin Melts">Muffin Melts</option>
-            <option value="Froggie Dips">Froggie Dips</option>
-        </select>
-    </label><br>
-   
-    <label>Repetition:
-        <input type="number" name="Repetition" required min="1" max="9999">
-    </label><br>
+    <div id="snacks-new-view">
+        <form id="add-snacks-form" action="/snacks" method="POST">
+            <label>Snack:
+                <select name="Snack" id="Snack ">
+                    <option value="Twinkle Toes">Twinkle Toes</option>
+                    <option value="Muffin Melts">Muffin Melts</option>
+                    <option value="Froggie Dips">Froggie Dips</option>
+                </select>
+            </label><br>
 
-    <label>Set:
-    <input type="number" name="Sets" required min="1" max="9999">
-</label><br>
+            <label>Repetition:
+                <input type="number" name="Repetition" required min="1" max="9999">
+            </label><br>
 
-<button type="submit">Add Snack</button>
-</form>
+            <label>Set:
+                <input type="number" name="Sets" required min="1" max="9999">
+            </label><br>
 
-<p>
-    <%= errorMsg %>
-  </p>
-</div>
-<%- include('../partials/footer') %>
+            <button type="submit">Add Snack</button>
+        </form>
+
+        <p>
+            <%= errorMsg %>
+        </p>
+    </div>
+    <%- include('../partials/footer') %>

@@ -1,19 +1,28 @@
 <%- include('../partials/header') %>
 
-
-<table id="list">
+  <table id="list">
     <thead>
       <tr>
         <th>Snack</th>
-      </tr>
+        </tr>
     </thead>
     <tbody>
       <% snacks.forEach(function(s) { %>
         <tr>
-          <td><%= s.Snack %></td>
-          <td><a href="/snacks/<%= s._id %>">DETAILS</a></td>
+          <td>
+            <%= s.Snack %>
+          </td>
+          <TD>
+            <form action="/snacks/<%= s._id %>">
+              <button type="submit">Details</button>
+            </form>
+
+          <TD>
+            <form action="/snacks/<%= s._id %>?_method=DELETE" method="POST">
+              <button type="submit">Delete</button>
+            </form>
         </tr>
         <% }); %>
-      </tbody>
-    </table>
-<%- include('../partials/footer') %>
+    </tbody>
+  </table>
+  <%- include('../partials/footer') %>

@@ -2,30 +2,29 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const frequencySchema = new Schema({
-    
     Repetition: {
         type: Number,
         min: 1,
-        max: 9999,      
+        max: 9999,
     },
     Sets: {
         type: Number,
-        min:1,
+        min: 1,
         max: 9999,
     },
-    user: {
+    userFreq: {
         type: Schema.Types.ObjectId,
         ref: "User"
     },
     snack: {
-        type:Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "Snack"
     },
     Date: {
-        type:Date,
+        type: Date,
     }
 }, {
-    timestamps: true   
+    timestamps: true
 })
 
 module.exports = mongoose.model("Frequency", frequencySchema)

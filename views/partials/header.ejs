@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <nav>
-    
-      <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
-      <% if (user) { %>
-        <a href="/snacks"	<%- title === 'ALL Snack' ? 'class="active"' : '' %>>
-          ALL SNACKS</a>
-        |
-        <a href="/snacks/new" <%- title === 'Add Snack' ? 'class="active"' : '' %>>ADD SNACK</a>
-        |
-        <a href="/snacks/new" <%- title === 'Add Equipment' ? 'class="active"' : '' %>>Choose Equipment</a>
-        
-        <a href="/logout">LOG OUT</a>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <nav>
+
+    <a href="/" <%- title==='Home' ? 'class="active"' : '' %>>HOME</a>
+    <% if (user) { %>
+      <a href="/snacks" <%- title==='MY SNACKS' ? 'class="active"' : '' %>>
+        MY SNACKS</a>
+      |
+      <a href="/snacks/new" <%- title==='Add Snack' ? 'class="active"' : '' %>>ADD A SNACK</a>
+      |
+      <a href="/logout">LOG OUT</a>
       <% } else { %>
         <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-      <% } %>
-    </nav>
+        <% } %>
+  </nav>
 
-    <h1><%= title %></h1>
-  
+  <h1>
+    <%= title %>
+  </h1>
