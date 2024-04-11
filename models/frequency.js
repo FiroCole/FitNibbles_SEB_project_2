@@ -21,8 +21,9 @@ const frequencySchema = new Schema({
         type:Schema.Types.ObjectId,
         ref: "Snack"
     },
-    userName: String,
-    userAvatar: String
+    Date: {
+        type:Date,
+    }
 }, {
     timestamps: true   
 })
