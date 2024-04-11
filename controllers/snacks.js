@@ -21,17 +21,15 @@ async function newSnack(req, res) {
 
 async function create(req, res) {
   const snack = new Snack(req.body)
-    snack.userSnack =req.user._id;
+  snack.userSnack = req.user._id;
   try {
-    // const snackCount = await Snack.countDocuments();
+    const snackCount = await Snack.countDocuments();
 
-    // if (snackCount >= 3) {
-    //   return res.render('snacks/new', { title: 'Add Snack', errorMsg: 'Only 3 snacks are allowed.' });
-    // }
-    
+    if (snackCount >= 3) {
+      return res.render('snacks/new', { title: 'Add Snack', errorMsg: 'Only 3 snacks are allowed.' });
+    }
+
     await snack.save();
-    //  await Snack.create(req.body);
-    
     res.redirect("/snacks");
   } catch (err) {
     console.log(err);
@@ -60,11 +58,7 @@ async function update(req, res) {
 
 async function deleteOne(req, res) {
   try {
-    // const snacks = await Snack.findById(req.params.id);
-    // if (!snacks) {
-    //   throw new Error('Snack not found');
-    // }
-    const snack = await Snack.findOneAndDelete({ _id: req.params.id, userSnack:req.user._id});
+    const snack = await Snack.findOneAndDelete({ _id: req.params.id, userSnack: req.user._id });
     console.log(snack);
     res.redirect('/snacks');
   } catch (err) {
