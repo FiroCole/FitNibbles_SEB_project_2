@@ -5,7 +5,7 @@ module.exports = {
   create, 
   edit,
   update: updateOne,
-//   delete : deleteOne,
+  delete : deleteOne,
 };
 
 
@@ -45,5 +45,21 @@ async function create(req, res) {
     }
 }
 
-  
-  
+async function deleteOne(req, res) {
+  try {
+    // Find the frequency document to get the associated snack ID before deletion
+    const frequency = await Frequency.findById(req.params.id);
+    if (!frequency) {
+      throw new Error('Frequency not found');
+    }
+
+    // Delete the frequency document
+    await Frequency.deleteOne({ _id: req.params.id });
+
+    // Redirect back to the associated snack's show page
+    res.redirect(`/snacks/${frequency.snack}`);
+  } catch (err) {
+    console.log(err);
+    res.redirect(`/snacks/show`, { title: 'Snack', errorMsg: err.message });
+  }
+}

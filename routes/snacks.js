@@ -5,17 +5,19 @@ const router = express.Router();
 const snacksCtrl = require("../controllers/snacks")
 
 //  all path start with /snack
+// get snacks/new to return view (form) to add a new snack. snackCtrl will use new method
+router.get("/new",ensureLoggedIn, snacksCtrl.new)
+
+
 // get snacks/:id to return view (form) to add a new snack. snackCtrl will use new method
-router.get("/:id", snacksCtrl.show)
+router.get("/:id", ensureLoggedIn, snacksCtrl.show)
 
 // index
 router.get("/", ensureLoggedIn, snacksCtrl.index)
 
-// get snacks/new to return view (form) to add a new snack. snackCtrl will use new method
-router.get("/new", snacksCtrl.new)
 
 //  post /snacks to handle the new snack form being submitted
- router.post("/", snacksCtrl.create)
+ router.post("/",ensureLoggedIn, snacksCtrl.create)
 
 
 module.exports = router 
