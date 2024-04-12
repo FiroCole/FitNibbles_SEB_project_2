@@ -1,5 +1,5 @@
 <div id="header" align="center">
-  <img src="" width="800" height="400">
+  <img src="https://live.staticflickr.com/65535/53647204692_8096b434a5_o.png" width="800" height="400">
 </div>
 
 <div id="description" align="center">
@@ -28,10 +28,7 @@ Fit Nibbles Tracker is designed to help you log and track "exercise snacks" — 
 
 
 ## :computer: Technologies Used
-<<<<<<< HEAD
-=======
 
->>>>>>> fb8e6dd1f3233a7ebe083e88cb1b3709d9bcff81
 ![Node](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
 ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
@@ -51,9 +48,9 @@ Fit Nibbles Tracker is designed to help you log and track "exercise snacks" — 
 
 <details open>
 <summary> How to Use the App</summary>
-- Sign Up/Log In: Create a new account or log into your existing account.
-- Select up to three Exercise Snacks to perform each day.
-- Log each exercise snack by entering the date, repetitions and sets.
+- Sign Up/Log In: Create a new account or log into your existing account. <br>
+- Select up to three Exercise Snacks to perform each day.<br>
+- Log each exercise snack by entering the date, repetitions and sets.<br>
 - Review Progress: Access your history to see your progress over time.
 
 </details>
