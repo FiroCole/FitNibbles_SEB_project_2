@@ -5,15 +5,18 @@
   <title>
     <%= title %>
   </title>
+  <link rel="icon" type="image/x-icon" href="https://live.staticflickr.com/65535/53601906311_d74b43fc06.jpg">
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
   <div class="container">
+    <nav class="topbar"></nav>
   <nav class="navbar">
 
     <a href="/" <%- title==='Home' ? 'class="active"' : '' %>>HOME</a>
     <% if (user) { %>
+      |
       <a href="/snacks" <%- title==='MY SNACKS' ? 'class="active"' : '' %>>
         MY SNACKS</a>
       |
@@ -24,7 +27,8 @@
         <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>
   </nav>
-
+<nav class="content">
   <h1>
     <%= title %>
   </h1>
+ 

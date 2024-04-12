@@ -4,7 +4,7 @@
 
 <div id="description" align="center">
 
-# :lemon: Fit Nibbles Tracker 	:kiwi_fruit:
+# :weight_lifting: Fit Nibbles Tracker 	:weight_lifting:
 
 ### [CLICK TO DEMO](https://gist.github.com/jim-clark/a714016bab26fad52106f6b2490e3eb7)
 
@@ -14,7 +14,7 @@
 
   ## :pencil: Description
 
- This project was an opportunity to desgin a simple fitness tracker to document your snacks, but not your edible snacks, the more salubrious, heart-pumping kind of snacks. We are talking about exercise snacks. These are quick exercises that you do through out the day. With this app you can keep track of your daily habits and document your progress.
+Fit Nibbles Tracker is designed to help you log and track "exercise snacks" — short, healthful bursts of physical activity you can do throughout your day. This app empowers you to maintain a healthy lifestyle by keeping track of your daily exercise habits and documenting your progress.
 
 </div>
 
@@ -22,8 +22,9 @@
 
 |    Description        | Screenshot                                                                                |
 | :----------------:    | ----------                                                                                |
-| <h3>Display Page</h3> | <img src="https://live.staticflickr.com/65535/53600776543_6b3210fa7d_z.jpg" width="700" /> |
-| <h3 align="center">Display when Cards are flipped</h3> | <img src="https://live.staticflickr.com/65535/53600776558_05a4e1671e_z.jpg" width="700" />  
+| <h3>Landing Page</h3> | <img src="https://live.staticflickr.com/65535/53647204692_8096b434a5_o.png" width="700" /> |
+| <h3 align="center">Exercise Snack Entry Page</h3> | <img src="https://live.staticflickr.com/65535/53648540640_b32cc099d4_o.png" width="700" />  
+
 
 
 ## :computer: Technologies Used
@@ -50,7 +51,11 @@
 
 <details open>
 <summary> How to Use the App</summary>
-- 
+- Sign Up/Log In: Create a new account or log into your existing account.
+- Select up to three Exercise Snacks to perform each day.
+- Log each exercise snack by entering the date, repetitions and sets.
+- Review Progress: Access your history to see your progress over time.
+
 </details>
 
 <details open>
@@ -60,6 +65,6 @@
 </details>
 
 ## :satellite: Upcoming Features
-- [:x:] 
-- [:x:] 
-- [:x:] 
+- [:x:] Rewards System: Set daily goals and earn reward points as you meet fitness milestones.
+- [:x:] Ability to Input customized exercise snacks
+- [:x:] Data visualization of performance metrics
