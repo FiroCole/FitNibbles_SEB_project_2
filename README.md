@@ -6,7 +6,7 @@
 
 # :weight_lifting: Fit Nibbles Tracker 	:weight_lifting:
 
-### [CLICK TO DEMO](https://gist.github.com/jim-clark/a714016bab26fad52106f6b2490e3eb7)
+### [CLICK TO DEMO](https://fitnibbles-c58aea2acf47.herokuapp.com/)
 
 ##### Firo Cole
 
@@ -57,8 +57,8 @@ Fit Nibbles Tracker is designed to help you log and track "exercise snacks" — 
 
 <details open>
 <summary> Click here to enjoy the app!</summary>
-<a href="https://gist.github.com/jim-clark/a714016bab26fad52106f6b2490e3eb7"
-> https://gist.github.com/jim-clark/a714016bab26fad52106f6b2490e3eb7 </a>
+<a href="https://fitnibbles-c58aea2acf47.herokuapp.com/"
+> https://fitnibbles-c58aea2acf47.herokuapp.com/ </a>
 </details>
 
 ## :satellite: Upcoming Features
